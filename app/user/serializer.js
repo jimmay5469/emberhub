@@ -9,7 +9,10 @@ export default DS.RESTSerializer.extend({
     hash = {
       id: hash.login,
       login: hash.login,
-      avatarUrl: hash.avatar_url
+      avatarUrl: hash.avatar_url,
+      links: {
+        repositories: hash.repos_url
+      }
     };
     return this._super(typeClass, hash, prop);
   }
