@@ -1,8 +1,9 @@
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
+  host: 'https://api.github.com',
   find: function(store, type, id, snapshot) {
-    return Ember.$.getJSON(`https://api.github.com/users/${id}`)
+    return this._super(store, type, id, snapshot)
     .then(function(data) {
       return {
         user: {
