@@ -1,9 +1,9 @@
 <h3 class='user-title'>
-  <img class='avatar' src='{{model.user.avatar_url}}' />
-  <span>{{model.user.login}}</span>
+  <img class='avatar' src='{{model.avatarUrl}}' />
+  <span>{{model.login}}</span>
 </h3>
 <ul>
   {{#each model.repositories as |repository|}}
-    <li>{{repository.full_name}}</li>
+    <li>{{repository.fullName}}</li>
   {{/each}}
 </ul>
